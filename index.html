@@ -53,37 +53,38 @@
                     <h2>Contexte</h2>
                     <img data-src="res/context.svg" class="fragment roll-in" alt="Contexte">
                     <p class="fragment">
-                        PSP: Prestataire de service de paiement
+                        PSP: Payment Service Provider
                     </p>
                 </section>
 
-                <section data-background="res/ascendant6.svg" data-background-size="60%">
+                <section data-background="res/ascendant-bg.svg" data-background-size="60%">
                     <h2>Objectif</h2>
-
+                    <p>Fournir des indicateurs</p>
                     <ul>
-                        <li>Distribution des paiements (# et €):</li>
-                        <ul>
-                            <li>Par moyen de paiement</li>
-                            <li>Par status</li>
-                            <li>Par raison du refus</li>
-                        </ul>
-                        <li>Représentation des tendances:</li>
-                        <ul>
-                            <li>Chiffre d'affaire</li>
-                            <li>Panier moyen</li>
-                            <li>Nombre de paiements</li>
-                        </ul>
+                        <li class="fragment">Distribution des paiements (# et €):
+                            <ul>
+                                <li>Par moyen de paiement</li>
+                                <li>Par status</li>
+                                <li>Par raison du refus</li>
+                            </ul>
+                        </li>
+                        <li class="fragment">Représentation des tendances:
+                            <ul>
+                                <li>Chiffre d'affaire</li>
+                                <li>Panier moyen</li>
+                                <li>Nombre de paiements</li>
+                            </ul>
+                        </li>
                     </ul>
                     <br/>
-                    <br/>
-                    <p class="fragment grow">Indicateurs calculés en temps réel</p>
+                    <p class="fragment grow">en temps réel</p>
                 </section>
             </section>
 
             <section>
-                <section data-background="res/sql2.svg" data-background-size="60%">
+                <section data-background="res/sql-bg.svg" data-background-size="60%">
                     <h2>Première approche</h2>
-                    <p>Utilisation naïve du modèle DBMS (Database Management System) existant</p>
+                    <p>Utilisation naïve du modèle relationnel existant</p>
                     <ul>
                         <li class="fragment">Avantages
                             <ul>
@@ -104,8 +105,8 @@
             </section>
 
             <section>
-                <section data-background="res/2442.svg" data-background-size="60%">
-                    <h2>Nouveau point de vu</h2>
+                <section data-background="res/time-bg.svg" data-background-size="60%">
+                    <h2>Changement d'orientation</h2>
                     <p>Utilisation d'une TSDB (Time Series Database)</p>
                     <ul>
                         <li class="fragment">Avantages
@@ -125,7 +126,7 @@
                     </ul>
                 </section>
 
-                <section data-background="res/2442.svg" data-background-size="60%">
+                <section data-background="res/time-bg.svg" data-background-size="60%">
                     <h2>Quelques TSDB</h2>
                     <ul>
                         <li><a href="http://opentsdb.net">OpenTSDB</a>: requiert HBase
@@ -143,15 +144,15 @@
             </section>
 
             <section>
-                <section data-background="res/look.svg" data-background-size="60%">
+                <section data-background="res/search-bg.svg" data-background-size="60%">
                     <h2>Recherche plein texte</h2>
-                    <p><q>plein texte</q> versus <q>séries temporelles</q>
+                    <p><q>plein texte</q> pour <q>séries temporelles</q>
                     </p>
                     <ul>
                         <li class="fragment"><a href="http://lucene.apache.org/solr">Solr</a>
                             <ul>
-                                <li>Utilisé pour de transactions</li>
-                                <li>Comptages efficients</li>
+                                <li>Utilisé pour recheche de transactions</li>
+                                <li>Comptages efficaces</li>
                                 <li>Modèle uni-dimentionnel</li>
                                 <li>Peu efficace vis à vis des montants</li>
                             </ul>
@@ -169,12 +170,9 @@
                     </ul>
                 </section>
 
-                <section data-background="res/look.svg" data-background-size="60%">
-                    <h2>elasticsearch</h2>
-                    <p>Indexation des paiements au fil de l'eau.</p>
-                    <p>
-                        Modèle:
-                    </p>
+                <section data-background="res/elastic-bg.svg" data-background-size="60%">
+                    <h2>Modèle</h2>
+                    <p>Indexation des paiements au fil de l'eau avec elasticsearch.</p>
                     <a href="http://proxmox.lyra-network.com:9200/pay_prod/2000/9212de99-beb0-4955-bd37-b0e003737ec3?pretty"> pay_prod/2000/9212de99-beb0-4955-bd37-b0e003737ec3</a>
                     <pre><code data-trim>
 {
@@ -192,20 +190,26 @@
                     </code></pre>
                 </section>
 
-                <section data-background="res/look.svg" data-background-size="60%">
-                    <h2>elasticsearch</h2>
-                    <p>Réalisation</p>
-
+                <section>
+                    <h2>Vue globale</h2>
+                    <img data-src="res/global-view.svg" alt="Vue globale">
                 </section>
 
-                <section data-background="res/look.svg" data-background-size="60%">
-                    <h2>elasticsearch</h2>
-                    <p>Démonstration</p>
+                <section data-background="res/elastic-bg.svg" data-background-size="60%">
+                    <h2>Démonstration</h2>
+                    <p><a href="http://proxmox.lyra-network.com:9280/">Tableau de bord</a>
+                    </p>
+                    <p><a href="http://proxmox.lyra-network.com:9200/_plugin/head">Elastic Head</a>
+                    </p>
+                    <p><a href="http://proxmox.lyra-network.com:9200/_plugin/bigdesk">Elastic Bigdesk</a>
+                    </p>
+                    <p><a href="http://proxmox.lyra-network.com:9200/_plugin/HQ">Elastic HQ</a>
+                    </p>
 
                 </section>
             </section>
 
-            <section data-background="res/question58.svg" data-background-size="60%">
+            <section data-background="res/question-bg.svg" data-background-size="60%">
                 <h1>Questions</h1>
                 <p><a href="http://glelouarn.github.io/metrics-presentation">http://glelouarn.github.io/metrics-presentation</a>
                 </p>
