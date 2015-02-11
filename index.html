@@ -6,7 +6,7 @@
 
     <title>Statistiques e-commerce</title>
 
-    <meta name="description" content="Représentation sttaistique temporelle des paiements e-commerce">
+    <meta name="description" content="Représentation statistique temporelle des paiements e-commerce">
     <meta name="author" content="Gildas Le Louarn">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
     <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="css/theme/black-night.css" id="theme">
 
     <!-- Code syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -93,10 +93,10 @@
                                 <li>Outils maitrisés</li>
                             </ul>
                         </li>
-                        <li class="fragment">Inconvéniants
+                        <li class="fragment">Inconvénients
                             <ul>
-                                <li>Pré-cacul nécéssaire</li>
-                                <li>Echelles pré-définies</li>
+                                <li>Pré-calcul nécessaires</li>
+                                <li>Echelles prédéfinies</li>
                                 <li>Temps réel?</li>
                             </ul>
                         </li>
@@ -116,7 +116,7 @@
                                 <li>Accès très efficaces aux données à partir du temps</li>
                             </ul>
                         </li>
-                        <li class="fragment">Inconvéniants
+                        <li class="fragment">Inconvénients
                             <ul>
                                 <li>Généralement une valeur par échantillon temporel</li>
                                 <li>Filtrage absent ou limité</li>
@@ -151,19 +151,20 @@
                     <ul>
                         <li class="fragment"><a href="http://lucene.apache.org/solr">Solr</a>
                             <ul>
-                                <li>Utilisé pour recheche de transactions</li>
+                                <li>Utilisé pour recherche de transactions</li>
                                 <li>Comptages efficaces</li>
-                                <li>Modèle uni-dimentionnel</li>
+                                <li>Modèle unidimensionnel</li>
                                 <li>Peu efficace vis à vis des montants</li>
                             </ul>
                         </li>
                         <li class="fragment"><a href="http://www.elasticsearch.org/">elasticsearch</a>
                             <ul>
-                                <li>Egalement basé sur Lucene</li>
+                                <li>Egalement basé sur <a href="http://lucene.apache.org/">Lucene</a>
+                                </li>
                                 <li>Modèle hiérarchique: <code>index / type / id</code>
                                 </li>
                                 <li>Depuis V1.0,
-                                    <a href="http://chrissimpson.co.uk/elasticsearch-aggregations-overview.html"> aggregations</a>
+                                    <a href="http://chrissimpson.co.uk/elasticsearch-aggregations-overview.html"> agrégations</a>
                                 </li>
                             </ul>
                         </li>
@@ -209,6 +210,24 @@
                 </section>
             </section>
 
+            <section data-background="res/like-bg.svg" data-background-size="60%">
+                <h2>Conclusion</h2>
+                <ul>
+                    <li class="fragment">Sortir des sentiers battus</li>
+                    <li class="fragment">Il reste des pistes non explorées</li>
+                    <li class="fragment">A l'avenir, il serait intéressant d'affiner la solution
+                        <ul>
+                            <li>Regrouper les données plus anciennes immuables</li>
+                            <li>Calculs approximatifs: <a href="http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_approximate_aggregations.html">approximate aggregations</a>
+                            </li>
+                            <li>Détecter cas innabituels: <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-aggregations-bucket-significantterms-aggregation.html">significant terms aggregation</a>
+                            </li>
+                            <li>...</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
             <section data-background="res/question-bg.svg" data-background-size="60%">
                 <h1>Questions</h1>
                 <p><a href="http://glelouarn.github.io/metrics-presentation">http://glelouarn.github.io/metrics-presentation</a>
@@ -234,7 +253,7 @@
             center: true,
 
             // Parallax background image
-            parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
+            parallaxBackgroundImage: 'res/reveal-parallax-1.jpg', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
 
             // Parallax background size
             parallaxBackgroundSize: '2100px 900px', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
