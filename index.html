@@ -41,203 +41,153 @@
         <!-- Any section element inside of this container is displayed as a slide -->
         <div class="slides">
             <section>
-                <h1>e-commerce</h1>
-                <p>Représentation statistique temporelle des paiements</p>
+                <h1>Le titre</h1>
+                <a href="http://www.lyra-network.com/"><img data-src="res/lyra.png" alt="Lyra Network" width="40%" style="background: rgba(255, 255, 255, 0.6);" />
+                </a>
+                <p>Et son sous titre</p>
                 <p>
-                    <small><a href="mailto:gildas.le.louarn@gmail.com">Gildas Le Louarn</a> / <a href="http://www.lyra-network.com/">Lyra Network</a></small>
+                    <small><a href="mailto:julie.makhortova@lyra-network.com">Julie Makhortova</a> / <a href="mailto:gildas.lelouarn@lyra-network.com">Gildas Le Louarn</a><br/></small>
                 </p>
             </section>
 
             <section>
                 <section>
-                    <h2>Contexte</h2>
-                    <img data-src="res/context.svg" class="fragment roll-in" alt="Contexte">
-                    <p class="fragment">
-                        PSP: Payment Service Provider
-                    </p>
-                </section>
-
-                <section data-background="res/ascendant-bg.svg" data-background-size="60%">
-                    <h2>Objectif</h2>
-                    <p>Fournir des indicateurs</p>
-                    <ul>
-                        <li class="fragment">Distribution des paiements (# et €):
-                            <ul>
-                                <li>Par moyen de paiement</li>
-                                <li>Par status</li>
-                                <li>Par raison du refus</li>
-                            </ul>
-                        </li>
-                        <li class="fragment">Représentation des tendances:
-                            <ul>
-                                <li>Chiffre d'affaire</li>
-                                <li>Panier moyen</li>
-                                <li>Nombre de paiements</li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <h2>Lyra Network & PayZen</h2>
                     <br/>
-                    <p class="fragment grow">en temps réel</p>
+                    <img data-src="res/chiffres.svg" alt="Chiffres" style="border: 0px; background: none; box-shadow: none">
                 </section>
-            </section>
 
-            <section>
-                <section data-background="res/sql-bg.svg" data-background-size="60%">
-                    <h2>Première approche</h2>
-                    <p>Utilisation naïve du modèle relationnel existant</p>
+                <section data-background="res/speaker-bg.svg" data-background-size="60%">
+                    <h2>En quelques mots</h2>
                     <ul>
-                        <li class="fragment">Avantages
+                        <li class="fragment">Valeurs:
                             <ul>
-                                <li>Environnement existant</li>
-                                <li>Disponibilité rapide</li>
-                                <li>Outils maitrisés</li>
+                                <li>Sécurité</li>
+                                <li>Performance</li>
+                                <li>Transparence</li>
                             </ul>
                         </li>
-                        <li class="fragment">Inconvénients
+                        <li class="fragment">Experts du paiement:
                             <ul>
-                                <li>Pré-calcul nécessaires</li>
-                                <li>Echelles prédéfinies</li>
-                                <li>Temps réel?</li>
+                                <li>Alternatifs de paiements</li>
+                                <li>Approche marketing</li>
+                                <li> Aide à la décision / lutte contre la fraude</li>
+                                <li>Facilité d’installation</li>
                             </ul>
                         </li>
                     </ul>
                 </section>
             </section>
 
-            <section>
-                <section data-background="res/time-bg.svg" data-background-size="60%">
-                    <h2>Changement d'orientation</h2>
-                    <p>Utilisation d'une TSDB (Time Series Database)</p>
-                    <ul>
-                        <li class="fragment">Avantages
-                            <ul>
-                                <li>Fait pour collecter beaucoup de valeurs</li>
-                                <li>En fonction du temps</li>
-                                <li>Accès très efficaces aux données à partir du temps</li>
-                            </ul>
-                        </li>
-                        <li class="fragment">Inconvénients
-                            <ul>
-                                <li>Généralement une valeur par échantillon temporel</li>
-                                <li>Filtrage absent ou limité</li>
-                                <li>Données souvent immuables</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
-
-                <section data-background="res/time-bg.svg" data-background-size="60%">
-                    <h2>Quelques TSDB</h2>
-                    <ul>
-                        <li><a href="http://opentsdb.net">OpenTSDB</a>: requiert HBase
-                        </li>
-                        <li><a href="https://github.com/kairosdb/kairosdb">KairosDB</a>: dérive de OpenTSDB, requiert Cassandra, HBase ou H2
-                        </li>
-                        <li><a href="http://square.github.io/cube">Cube</a>: requiert MongoDB, permet modification et recherche structurée
-                        </li>
-                        <li><a href="http://influxdb.com/">InfluxDB</a>: autonome, toujours en alpha
-                        </li>
-                        <li><a href="http://graphite.wikidot.com/whisper">Whisper</a>, <a href="http://blueflood.io">BlueFlood DB</a> , <a href="http://oss.oetiker.ch/rrdtool">RRDtool</a>, <a href="https://github.com/dustin/seriesly">Seriesly </a>
-                        </li>, ...
-                    </ul>
-                </section>
+            <section data-background="res/ascendant-bg.svg" data-background-size="60%">
+                <h2>Attentes du marché</h2>
+                <p>Disposer d'indicateurs</p>
+                <ul>
+                    <li class="fragment">Distribution des paiements (# et €):
+                        <ul>
+                            <li>Par moyen de paiement</li>
+                            <li>Par status</li>
+                            <li>Par raison du refus</li>
+                        </ul>
+                    </li>
+                    <li class="fragment">Représentation des tendances:
+                        <ul>
+                            <li>Chiffre d'affaire</li>
+                            <li>Panier moyen</li>
+                            <li>Nombre de paiements</li>
+                        </ul>
+                    </li>
+                </ul>
+                <br/>
+                <p class="fragment grow">en temps réel</p>
             </section>
 
             <section>
-                <section data-background="res/search-bg.svg" data-background-size="60%">
-                    <h2>Recherche plein texte</h2>
-                    <p><q>plein texte</q> pour <q>séries temporelles</q>
-                    </p>
+                <section data-background="res/mind-bg.svg" data-background-size="60%">
+                    <h2>Réflexion itérative</h2>
+                    <br/>
                     <ul>
-                        <li class="fragment"><a href="http://lucene.apache.org/solr">Solr</a>
+                        <li class="fragment">Solution naturelle inadaptée</li>
+                        <li class="fragment">Un florilège de technologies disponibles</li>
+                        <li class="fragment">Des expérimentations
                             <ul>
-                                <li>Utilisé pour recherche de transactions</li>
-                                <li>Comptages efficaces</li>
-                                <li>Modèle unidimensionnel</li>
-                                <li>Peu efficace vis à vis des montants</li>
-                            </ul>
-                        </li>
-                        <li class="fragment"><a href="http://www.elasticsearch.org/">elasticsearch</a>
-                            <ul>
-                                <li>Egalement basé sur <a href="http://lucene.apache.org/">Lucene</a>
-                                </li>
-                                <li>Modèle hiérarchique: <code>index / type / id</code>
-                                </li>
-                                <li>Depuis V1.0,
-                                    <a href="http://chrissimpson.co.uk/elasticsearch-aggregations-overview.html"> agrégations</a>
-                                </li>
+                                <li>Du plus naturel au moins naturel</li>
+                                <li>Evaluation <q>bottom up</q> éliminatoire</li>
                             </ul>
                         </li>
                     </ul>
+                </section>
+
+                <section>
+                    <h2>Technologies étudiées</h2>
+                    <img data-src="res/databases.svg" alt="Technologies étudiées">
                 </section>
 
                 <section data-background="res/elastic-bg.svg" data-background-size="60%">
                     <h2>Modèle</h2>
-                    <p>Indexation des paiements au fil de l'eau avec elasticsearch.</p>
-                    <a href="http://proxmox.lyra-network.com:9200/pay_prod/2000/9212de99-beb0-4955-bd37-b0e003737ec3?pretty"> pay_prod/2000/9212de99-beb0-4955-bd37-b0e003737ec3</a>
+                    <br/>
+                    <ul>
+                        <li>Seconde base de données: elasticsearch.</li>
+                        <li>Indexation en temps réel</li>
+                        <li>Données anonymisées</li>
+                    </ul>
+                    <br/>
+                    <br/>
                     <pre><code data-trim>
 {
-  "shop": 2, 
+  "shop": 15645, 
   "currency": 320,
   "amount": 104092, 
   "status": "CANCELLED", 
   "card": "MC", 
   "rejectReason": "AUTO_07", 
   "date": "2014-01-28T22:47:37+00:00", 
-  "domain": "lyra", 
-  "contract": 1, 
+  "contract": 141564, 
   "cardCountry": "DE"
 }
                     </code></pre>
                 </section>
 
-                <section>
-                    <h2>Vue globale</h2>
-                    <img data-src="res/global-view.svg" alt="Vue globale">
-                </section>
-
-                <section data-background="res/elastic-bg.svg" data-background-size="60%">
-                    <h2>Démonstration</h2>
-                    <p><a href="http://proxmox.lyra-network.com:9280/">Tableau de bord</a>
-                    </p>
-                    <p><a href="http://proxmox.lyra-network.com:9200/_plugin/head">Elastic Head</a>
-                    </p>
-                    <p><a href="http://proxmox.lyra-network.com:9200/_plugin/bigdesk">Elastic Bigdesk</a>
-                    </p>
-                    <p><a href="http://proxmox.lyra-network.com:9200/_plugin/HQ">Elastic HQ</a>
-                    </p>
-
+                <section data-background="res/chemistry-bg.svg" data-background-size="60%">
+                    <h2>Maquette finale</h2>
+                    <br/>
+                    <ul>
+                        <li>Valider globalement la solution</li>
+                        <li>Illustrer l'application du cahier des charges</li>
+                        <li><a href="http://sandbox.lyra-labs.fr/">Démonstrateur</a>
+                        </li>
+                    </ul>
                 </section>
             </section>
 
             <section data-background="res/like-bg.svg" data-background-size="60%">
                 <h2>Conclusion</h2>
                 <ul>
-                    <li class="fragment">Sortir des sentiers battus</li>
-                    <li class="fragment">Il reste des pistes non explorées</li>
-                    <li class="fragment">A l'avenir, il serait intéressant d'affiner la solution
-                        <ul>
-                            <li>Regrouper les données plus anciennes immuables</li>
-                            <li>Calculs approximatifs: <a href="http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_approximate_aggregations.html">approximate aggregations</a>
-                            </li>
-                            <li>Détecter cas innabituels: <a href="http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/search-aggregations-bucket-significantterms-aggregation.html">significant terms aggregation</a>
-                            </li>
-                            <li>...</li>
-                        </ul>
+                    <li class="fragment">Tout comme la toile pour l'artiste peintre, la technologie n'est autre que le support de la créativité de l'informaticien.</li>
+                    <li class="fragment">Il n'existe pas de relation bijective entre besoin et solution.</li>
+                    <li class="fragment">Innover c'est explorer et se tromper plusieurs fois.
                     </li>
                 </ul>
             </section>
 
             <section data-background="res/question-bg.svg" data-background-size="60%">
                 <h1>Questions</h1>
+                <small>
                 <p><a href="http://glelouarn.github.io/metrics-presentation">http://glelouarn.github.io/metrics-presentation</a>
                 </p>
-                <p><a href="mailto:gildas.le.louarn@gmail.com">gildas.le.louarn@gmail.com</a>
+                <p><a href="mailto:julie.makhortova@lyra-network.com">julie.makhortova@lyra-network.com</a>
                 </p>
-                <p><a href="http://twitter.com/glelouarn">@glelouarn</a>
+                <p><a href="mailto:gildas.le.louarn@gmail.com">gildas.lelouarn@lyra-network.com</a> - <a href="http://twitter.com/glelouarn">@glelouarn</a>
                 </p>
+                </small>
             </section>
         </div>
+    </div>
+
+    <div style="display: block; position: absolute; bottom: 16px; margin-left: 16px">
+        <a href="https://www.payzen.eu/">
+            <img src="res/payzen-logo-grey.svg" alt="Payzen by Lyra Network" width="100" />
+        </a>
     </div>
 
     <script src="lib/js/head.min.js"></script>
@@ -253,7 +203,7 @@
             center: true,
 
             // Parallax background image
-            parallaxBackgroundImage: 'res/reveal-parallax-1.jpg', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
+            parallaxBackgroundImage: 'res/blue-parallax.jpg', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
 
             // Parallax background size
             parallaxBackgroundSize: '2100px 900px', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)

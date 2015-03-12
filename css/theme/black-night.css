@@ -225,7 +225,7 @@ body {
  *********************************************/
 
 .reveal a {
-    color: #42affa;
+    color: #d59c79;
     text-decoration: none;
     -webkit-transition: color 0.15s ease;
     -moz-transition: color 0.15s ease;
@@ -233,7 +233,7 @@ body {
 }
 
 .reveal a:hover {
-    color: #8dcffc;
+    color: #d59c79;
     text-shadow: none;
     border: none;
 }
